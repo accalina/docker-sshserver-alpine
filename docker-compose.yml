@@ -1,7 +1,13 @@
 version: '3.5'
 services:
   alpine-ssh:
+    build:
+      context: .
+      args:
+        username: "accalina"
+        password: "test123"
+    image: alpine-ssh
+    hostname: tinybox
     container_name: alpine-ssh
     ports:
       - '2222:22'
-    build: .
