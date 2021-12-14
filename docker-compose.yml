@@ -1,0 +1,7 @@
+version: '3.5'
+services:
+  alpine-ssh:
+    container_name: alpine-ssh
+    ports:
+      - '2222:22'
+    build: .
